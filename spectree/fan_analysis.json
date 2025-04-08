@@ -1,0 +1,37 @@
+{
+    "fan-in": {
+        "spectree": 6,
+        "spectree._pydantic": 11,
+        "spectree._types": 9,
+        "spectree.config": 3,
+        "spectree.models": 4,
+        "spectree.page": 2,
+        "spectree.plugins": 6,
+        "spectree.plugins.base": 6,
+        "spectree.plugins.falcon_plugin": 1,
+        "spectree.plugins.flask_plugin": 1,
+        "spectree.plugins.quart_plugin": 1,
+        "spectree.plugins.starlette_plugin": 1,
+        "spectree.response": 8,
+        "spectree.spec": 3,
+        "spectree.utils": 6
+    },
+    "fan-out": {
+        "__main__": 15,
+        "spectree": 3,
+        "spectree._pydantic": 0,
+        "spectree._types": 1,
+        "spectree.config": 3,
+        "spectree.models": 1,
+        "spectree.page": 0,
+        "spectree.plugins": 1,
+        "spectree.plugins.base": 6,
+        "spectree.plugins.falcon_plugin": 6,
+        "spectree.plugins.flask_plugin": 7,
+        "spectree.plugins.quart_plugin": 7,
+        "spectree.plugins.starlette_plugin": 7,
+        "spectree.response": 3,
+        "spectree.spec": 6,
+        "spectree.utils": 2
+    }
+}

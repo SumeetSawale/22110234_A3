@@ -1,0 +1,818 @@
+{
+  "components": {
+    "schemas": {
+      "Cookies.7068f62": {
+        "properties": {
+          "pub": {
+            "title": "Pub",
+            "type": "string"
+          }
+        },
+        "required": [
+          "pub"
+        ],
+        "title": "Cookies",
+        "type": "object"
+      },
+      "CustomError.7068f62": {
+        "properties": {
+          "foo": {
+            "title": "Foo",
+            "type": "string"
+          }
+        },
+        "required": [
+          "foo"
+        ],
+        "title": "CustomError",
+        "type": "object"
+      },
+      "FormFileUpload.7068f62": {
+        "properties": {
+          "file": {
+            "format": "binary",
+            "title": "File",
+            "type": "string"
+          }
+        },
+        "required": [
+          "file"
+        ],
+        "title": "FormFileUpload",
+        "type": "object"
+      },
+      "Headers.7068f62": {
+        "properties": {
+          "lang": {
+            "$ref": "#/components/schemas/Headers.7068f62.Language"
+          }
+        },
+        "required": [
+          "lang"
+        ],
+        "title": "Headers",
+        "type": "object"
+      },
+      "Headers.7068f62.Language": {
+        "description": "Language enum",
+        "enum": [
+          "en-US",
+          "zh-CN"
+        ],
+        "title": "Language",
+        "type": "string"
+      },
+      "JSON.7068f62": {
+        "properties": {
+          "limit": {
+            "title": "Limit",
+            "type": "integer"
+          },
+          "name": {
+            "title": "Name",
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "limit"
+        ],
+        "title": "JSON",
+        "type": "object"
+      },
+      "JSONList.a9993e3": {
+        "items": {
+          "$ref": "#/components/schemas/JSONList.a9993e3.JSON"
+        },
+        "title": "JSONList",
+        "type": "array"
+      },
+      "JSONList.a9993e3.JSON": {
+        "properties": {
+          "limit": {
+            "title": "Limit",
+            "type": "integer"
+          },
+          "name": {
+            "title": "Name",
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "limit"
+        ],
+        "title": "JSON",
+        "type": "object"
+      },
+      "ListJSON.a9993e3": {
+        "items": {
+          "$ref": "#/components/schemas/ListJSON.a9993e3.JSON"
+        },
+        "title": "ListJSON",
+        "type": "array"
+      },
+      "Query.7068f62": {
+        "properties": {
+          "order": {
+            "$ref": "#/components/schemas/Query.7068f62.Order"
+          }
+        },
+        "required": [
+          "order"
+        ],
+        "title": "Query",
+        "type": "object"
+      },
+      "Query.7068f62.Order": {
+        "description": "Order enum",
+        "enum": [
+          0,
+          1
+        ],
+        "title": "Order",
+        "type": "integer"
+      },
+      "Resp.7068f62": {
+        "properties": {
+          "name": {
+            "title": "Name",
+            "type": "string"
+          },
+          "score": {
+            "items": {
+              "type": "integer"
+            },
+            "title": "Score",
+            "type": "array"
+          }
+        },
+        "required": [
+          "name",
+          "score"
+        ],
+        "title": "Resp",
+        "type": "object"
+      },
+      "RootResp.a9993e3.JSON": {
+        "properties": {
+          "limit": {
+            "title": "Limit",
+            "type": "integer"
+          },
+          "name": {
+            "title": "Name",
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "limit"
+        ],
+        "title": "JSON",
+        "type": "object"
+      }
+    }
+  },
+  "info": {
+    "title": "Service API Document",
+    "version": "0.1.0"
+  },
+  "openapi": "3.1.0",
+  "paths": {
+    "/api/custom_error": {
+      "post": {
+        "description": "",
+        "operationId": "post__api_custom_error",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CustomError.7068f62"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CustomError.7068f62"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ValidationError.6a07bef"
+                }
+              }
+            },
+            "description": "Unprocessable Content"
+          }
+        },
+        "summary": "custom_error <POST>",
+        "tags": []
+      }
+    },
+    "/api/file_upload": {
+      "post": {
+        "description": "",
+        "operationId": "post__api_file_upload",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/FormFileUpload.7068f62"
+              }
+            }
+          }
+        },
+        "responses": {},
+        "summary": "file_upload <POST>",
+        "tags": []
+      }
+    },
+    "/api/list_json": {
+      "post": {
+        "description": "",
+        "operationId": "post__api_list_json",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ListJSON.a9993e3"
+              }
+            }
+          }
+        },
+        "responses": {},
+        "summary": "list_json <POST>",
+        "tags": []
+      }
+    },
+    "/api/no_response": {
+      "get": {
+        "description": "",
+        "operationId": "get__api_no_response",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StrDict.a9993e3"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ValidationError.6a07bef"
+                }
+              }
+            },
+            "description": "Unprocessable Content"
+          }
+        },
+        "summary": "no_response <GET>",
+        "tags": []
+      },
+      "post": {
+        "description": "",
+        "operationId": "post__api_no_response",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StrDict.a9993e3"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ValidationError.6a07bef"
+                }
+              }
+            },
+            "description": "Unprocessable Content"
+          }
+        },
+        "summary": "no_response <POST>",
+        "tags": []
+      }
+    },
+    "/api/return_list": {
+      "get": {
+        "description": "",
+        "operationId": "get__api_return_list",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/JSONList.a9993e3"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ValidationError.6a07bef"
+                }
+              }
+            },
+            "description": "Unprocessable Content"
+          }
+        },
+        "summary": "return_list <GET>",
+        "tags": []
+      }
+    },
+    "/api/return_optional_alias": {
+      "get": {
+        "description": "",
+        "operationId": "get__api_return_optional_alias",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OptionalAliasResp.7068f62"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ValidationError.6a07bef"
+                }
+              }
+            },
+            "description": "Unprocessable Content"
+          }
+        },
+        "summary": "return_optional_alias <GET>",
+        "tags": []
+      }
+    },
+    "/api/return_root": {
+      "get": {
+        "description": "",
+        "operationId": "get__api_return_root",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RootResp.a9993e3"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ValidationError.6a07bef"
+                }
+              }
+            },
+            "description": "Unprocessable Content"
+          }
+        },
+        "summary": "return_root <GET>",
+        "tags": []
+      }
+    },
+    "/api/user/{name}": {
+      "post": {
+        "description": "",
+        "operationId": "post__api_user_{name}",
+        "parameters": [
+          {
+            "description": "",
+            "in": "path",
+            "name": "name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "",
+            "in": "query",
+            "name": "order",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/Query.7068f62.Order"
+            }
+          },
+          {
+            "description": "",
+            "in": "cookie",
+            "name": "pub",
+            "required": true,
+            "schema": {
+              "title": "Pub",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/JSON.7068f62"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Resp.7068f62"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ValidationError.6a07bef"
+                }
+              }
+            },
+            "description": "Unprocessable Content"
+          }
+        },
+        "summary": "user_score <POST>",
+        "tags": [
+          "API",
+          "test"
+        ]
+      }
+    },
+    "/api/user/{name}/address/{address_id}": {
+      "get": {
+        "description": "",
+        "operationId": "get__api_user_{name}_address_{address_id}",
+        "parameters": [
+          {
+            "description": "The name that uniquely identifies the user.",
+            "in": "path",
+            "name": "name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "",
+            "in": "path",
+            "name": "address_id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "",
+            "in": "query",
+            "name": "order",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/Query.7068f62.Order"
+            }
+          }
+        ],
+        "responses": {},
+        "summary": "user_address <GET>",
+        "tags": []
+      }
+    },
+    "/api/user_annotated/{name}": {
+      "post": {
+        "description": "",
+        "operationId": "post__api_user_annotated_{name}",
+        "parameters": [
+          {
+            "description": "",
+            "in": "path",
+            "name": "name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "",
+            "in": "query",
+            "name": "order",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/Query.7068f62.Order"
+            }
+          },
+          {
+            "description": "",
+            "in": "cookie",
+            "name": "pub",
+            "required": true,
+            "schema": {
+              "title": "Pub",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/JSON.7068f62"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Resp.7068f62"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ValidationError.6a07bef"
+                }
+              }
+            },
+            "description": "Unprocessable Content"
+          }
+        },
+        "summary": "user_score_annotated <POST>",
+        "tags": [
+          "API",
+          "test"
+        ]
+      }
+    },
+    "/api/user_model/{name}": {
+      "post": {
+        "description": "",
+        "operationId": "post__api_user_model_{name}",
+        "parameters": [
+          {
+            "description": "",
+            "in": "path",
+            "name": "name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "",
+            "in": "query",
+            "name": "order",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/Query.7068f62.Order"
+            }
+          },
+          {
+            "description": "",
+            "in": "cookie",
+            "name": "pub",
+            "required": true,
+            "schema": {
+              "title": "Pub",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/JSON.7068f62"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Resp.7068f62"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ValidationError.6a07bef"
+                }
+              }
+            },
+            "description": "Unprocessable Content"
+          }
+        },
+        "summary": "user_score_model <POST>",
+        "tags": [
+          "API",
+          "test"
+        ]
+      }
+    },
+    "/api/user_skip/{name}": {
+      "post": {
+        "description": "",
+        "operationId": "post__api_user_skip_{name}",
+        "parameters": [
+          {
+            "description": "",
+            "in": "path",
+            "name": "name",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "",
+            "in": "query",
+            "name": "order",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/Query.7068f62.Order"
+            }
+          },
+          {
+            "description": "",
+            "in": "cookie",
+            "name": "pub",
+            "required": true,
+            "schema": {
+              "title": "Pub",
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/JSON.7068f62"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Resp.7068f62"
+                }
+              }
+            },
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ValidationError.6a07bef"
+                }
+              }
+            },
+            "description": "Unprocessable Content"
+          }
+        },
+        "summary": "user_score_skip <POST>",
+        "tags": [
+          "API",
+          "test"
+        ]
+      }
+    },
+    "/ping": {
+      "get": {
+        "description": "description",
+        "operationId": "get__ping",
+        "parameters": [
+          {
+            "description": "",
+            "in": "header",
+            "name": "lang",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/Headers.7068f62.Language"
+            }
+          }
+        ],
+        "responses": {
+          "202": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StrDict.a9993e3"
+                }
+              }
+            },
+            "description": "Accepted"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ValidationError.6a07bef"
+                }
+              }
+            },
+            "description": "Unprocessable Content"
+          }
+        },
+        "summary": "summary",
+        "tags": [
+          "test",
+          "health"
+        ]
+      }
+    }
+  },
+  "security": [],
+  "tags": [
+    {
+      "name": "test"
+    },
+    {
+      "name": "health"
+    },
+    {
+      "description": "🐱",
+      "externalDocs": {
+        "description": "",
+        "url": "https://pypi.org"
+      },
+      "name": "API"
+    }
+  ]
+}

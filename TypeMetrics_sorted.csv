@@ -1,0 +1,6 @@
+Project Name,Package Name,Type Name,LCOM1,LCOM2,LCOM3,LCOM4,LCOM5,YALCOM,average
+java,com.android.adobot.tasks,SmsForwarder,43.0,31.0,4.0,3.0,0.92,0.2727272727272727,13.698787878787877
+java,com.android.adobot,CommandService,46.0,26.0,5.0,4.0,0.6818181818181818,0.1666666666666666,13.641414141414144
+java,com.android.adobot,CommonParams,28.0,20.0,1.0,1.0,0.8888888888888888,0.0,8.481481481481481
+java,com.android.adobot.activities,PermissionsActivity,20.0,19.0,6.0,1.0,0.9583333333333334,0.0,7.826388888888889
+java,com.android.adobot.tasks,LocationMonitor,22.0,16.0,4.0,1.0,0.8214285714285714,0.0,7.303571428571428

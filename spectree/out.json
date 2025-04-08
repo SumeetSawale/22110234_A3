@@ -1,0 +1,276 @@
+{
+    "__main__": {
+        "bacon": 0,
+        "imports": [
+            "spectree",
+            "spectree._pydantic",
+            "spectree._types",
+            "spectree.config",
+            "spectree.models",
+            "spectree.page",
+            "spectree.plugins",
+            "spectree.plugins.base",
+            "spectree.plugins.falcon_plugin",
+            "spectree.plugins.flask_plugin",
+            "spectree.plugins.quart_plugin",
+            "spectree.plugins.starlette_plugin",
+            "spectree.response",
+            "spectree.spec",
+            "spectree.utils"
+        ],
+        "name": "__main__",
+        "path": null
+    },
+    "spectree": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__",
+            "spectree.plugins.base",
+            "spectree.plugins.falcon_plugin",
+            "spectree.plugins.flask_plugin",
+            "spectree.plugins.quart_plugin",
+            "spectree.plugins.starlette_plugin"
+        ],
+        "imports": [
+            "spectree.models",
+            "spectree.response",
+            "spectree.spec"
+        ],
+        "name": "spectree",
+        "path": "/home/sumeet/Sumeet/Study/STT/spectree/spectree/__init__.py"
+    },
+    "spectree._pydantic": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__",
+            "spectree._types",
+            "spectree.config",
+            "spectree.models",
+            "spectree.plugins.base",
+            "spectree.plugins.falcon_plugin",
+            "spectree.plugins.flask_plugin",
+            "spectree.plugins.quart_plugin",
+            "spectree.plugins.starlette_plugin",
+            "spectree.response",
+            "spectree.utils"
+        ],
+        "name": "spectree._pydantic",
+        "path": "/home/sumeet/Sumeet/Study/STT/spectree/spectree/_pydantic.py"
+    },
+    "spectree._types": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__",
+            "spectree.plugins.base",
+            "spectree.plugins.falcon_plugin",
+            "spectree.plugins.flask_plugin",
+            "spectree.plugins.quart_plugin",
+            "spectree.plugins.starlette_plugin",
+            "spectree.response",
+            "spectree.spec",
+            "spectree.utils"
+        ],
+        "imports": [
+            "spectree._pydantic"
+        ],
+        "name": "spectree._types",
+        "path": "/home/sumeet/Sumeet/Study/STT/spectree/spectree/_types.py"
+    },
+    "spectree.config": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__",
+            "spectree.plugins.base",
+            "spectree.spec"
+        ],
+        "imports": [
+            "spectree._pydantic",
+            "spectree.models",
+            "spectree.page"
+        ],
+        "name": "spectree.config",
+        "path": "/home/sumeet/Sumeet/Study/STT/spectree/spectree/config.py"
+    },
+    "spectree.models": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__",
+            "spectree",
+            "spectree.config",
+            "spectree.spec"
+        ],
+        "imports": [
+            "spectree._pydantic"
+        ],
+        "name": "spectree.models",
+        "path": "/home/sumeet/Sumeet/Study/STT/spectree/spectree/models.py"
+    },
+    "spectree.page": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__",
+            "spectree.config"
+        ],
+        "name": "spectree.page",
+        "path": "/home/sumeet/Sumeet/Study/STT/spectree/spectree/page.py"
+    },
+    "spectree.plugins": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__",
+            "spectree.plugins.falcon_plugin",
+            "spectree.plugins.flask_plugin",
+            "spectree.plugins.quart_plugin",
+            "spectree.plugins.starlette_plugin",
+            "spectree.spec"
+        ],
+        "imports": [
+            "spectree.plugins.base"
+        ],
+        "name": "spectree.plugins",
+        "path": "/home/sumeet/Sumeet/Study/STT/spectree/spectree/plugins/__init__.py"
+    },
+    "spectree.plugins.base": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__",
+            "spectree.plugins",
+            "spectree.plugins.falcon_plugin",
+            "spectree.plugins.flask_plugin",
+            "spectree.plugins.quart_plugin",
+            "spectree.plugins.starlette_plugin"
+        ],
+        "imports": [
+            "spectree",
+            "spectree._pydantic",
+            "spectree._types",
+            "spectree.config",
+            "spectree.response",
+            "spectree.spec"
+        ],
+        "name": "spectree.plugins.base",
+        "path": "/home/sumeet/Sumeet/Study/STT/spectree/spectree/plugins/base.py"
+    },
+    "spectree.plugins.falcon_plugin": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "spectree",
+            "spectree._pydantic",
+            "spectree._types",
+            "spectree.plugins",
+            "spectree.plugins.base",
+            "spectree.response"
+        ],
+        "name": "spectree.plugins.falcon_plugin",
+        "path": "/home/sumeet/Sumeet/Study/STT/spectree/spectree/plugins/falcon_plugin.py"
+    },
+    "spectree.plugins.flask_plugin": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "spectree",
+            "spectree._pydantic",
+            "spectree._types",
+            "spectree.plugins",
+            "spectree.plugins.base",
+            "spectree.response",
+            "spectree.utils"
+        ],
+        "name": "spectree.plugins.flask_plugin",
+        "path": "/home/sumeet/Sumeet/Study/STT/spectree/spectree/plugins/flask_plugin.py"
+    },
+    "spectree.plugins.quart_plugin": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "spectree",
+            "spectree._pydantic",
+            "spectree._types",
+            "spectree.plugins",
+            "spectree.plugins.base",
+            "spectree.response",
+            "spectree.utils"
+        ],
+        "name": "spectree.plugins.quart_plugin",
+        "path": "/home/sumeet/Sumeet/Study/STT/spectree/spectree/plugins/quart_plugin.py"
+    },
+    "spectree.plugins.starlette_plugin": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "spectree",
+            "spectree._pydantic",
+            "spectree._types",
+            "spectree.plugins",
+            "spectree.plugins.base",
+            "spectree.response",
+            "spectree.utils"
+        ],
+        "name": "spectree.plugins.starlette_plugin",
+        "path": "/home/sumeet/Sumeet/Study/STT/spectree/spectree/plugins/starlette_plugin.py"
+    },
+    "spectree.response": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__",
+            "spectree",
+            "spectree.plugins.base",
+            "spectree.plugins.falcon_plugin",
+            "spectree.plugins.flask_plugin",
+            "spectree.plugins.quart_plugin",
+            "spectree.plugins.starlette_plugin",
+            "spectree.spec"
+        ],
+        "imports": [
+            "spectree._pydantic",
+            "spectree._types",
+            "spectree.utils"
+        ],
+        "name": "spectree.response",
+        "path": "/home/sumeet/Sumeet/Study/STT/spectree/spectree/response.py"
+    },
+    "spectree.spec": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__",
+            "spectree",
+            "spectree.plugins.base"
+        ],
+        "imports": [
+            "spectree._types",
+            "spectree.config",
+            "spectree.models",
+            "spectree.plugins",
+            "spectree.response",
+            "spectree.utils"
+        ],
+        "name": "spectree.spec",
+        "path": "/home/sumeet/Sumeet/Study/STT/spectree/spectree/spec.py"
+    },
+    "spectree.utils": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__",
+            "spectree.plugins.flask_plugin",
+            "spectree.plugins.quart_plugin",
+            "spectree.plugins.starlette_plugin",
+            "spectree.response",
+            "spectree.spec"
+        ],
+        "imports": [
+            "spectree._pydantic",
+            "spectree._types"
+        ],
+        "name": "spectree.utils",
+        "path": "/home/sumeet/Sumeet/Study/STT/spectree/spectree/utils.py"
+    }
+}
